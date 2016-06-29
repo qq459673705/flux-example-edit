@@ -14,7 +14,7 @@ var ChatAppDispatcher = require('../dispatcher/ChatAppDispatcher');
 var ChatConstants = require('../constants/ChatConstants');
 var ChatMessageUtils = require('../utils/ChatMessageUtils');
 var EventEmitter = require('events').EventEmitter;
-var ThreadStore = require('../stores/ThreadStore');
+var ThreadStore = require('../stores/ThreadStore'); // 这一行决定了 store的注册顺序，flux 中 _callbacks数组中存储顺序就是thread message unthread
 var assign = require('object-assign');
 
 var ActionTypes = ChatConstants.ActionTypes;

@@ -14,7 +14,7 @@ var ChatAppDispatcher = require('../dispatcher/ChatAppDispatcher');
 var ChatConstants = require('../constants/ChatConstants');
 var EventEmitter = require('events').EventEmitter;
 var MessageStore = require('../stores/MessageStore');
-var ThreadStore = require('../stores/ThreadStore');
+var ThreadStore = require('../stores/ThreadStore');  //这行代码决定了register的顺序，ThreadStore 首先register，被保存进Flux 中的
 var assign = require('object-assign');
 
 var ActionTypes = ChatConstants.ActionTypes;
